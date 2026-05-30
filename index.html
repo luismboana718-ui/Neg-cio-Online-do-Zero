@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Negócio Online do Zero - Moçambique</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+  <style>
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+    }
+
+    .hero-bg {
+      background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.85)),
+      url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1600&q=80');
+      background-size: cover;
+      background-position: center;
+    }
+
+    .modal-content {
+      max-height: 92vh;
+      overflow-y: auto;
+    }
+  </style>
+</head>
+
+<body class="bg-gray-50 text-gray-900">
+
+  <!-- Navbar -->
+  <nav class="bg-white shadow-md fixed w-full z-50">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+      <div class="flex items-center gap-3">
+        <i class="fa-solid fa-rocket text-3xl text-indigo-600"></i>
+        <h1 class="text-2xl font-bold">
+          Negócio<span class="text-indigo-600">Online</span> MZ
+        </h1>
+      </div>
+
+      <button onclick="abrirModal()"
+        class="bg-indigo-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-indigo-700 transition">
+        Ver Guia Completo
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero-bg text-white min-h-screen flex items-center pt-20">
+    <div class="max-w-6xl mx-auto px-6 py-24">
+      <div class="max-w-2xl">
+        <h2 class="text-5xl md:text-6xl font-bold leading-tight mb-6">
+          Negócio Online do Zero em Moçambique
+        </h2>
+
+        <p class="text-xl mb-8 text-gray-200">
+          Marketing Digital + Estratégias de Pagamento Local
+        </p>
+
+        <button onclick="abrirModal()"
+          class="bg-indigo-600 text-white px-8 py-4 rounded-xl text-lg font-semibold hover:bg-indigo-700 transition">
+          Abrir Guia Completo →
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Modal -->
+  <div id="modal" class="hidden fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-[100] p-4">
+    <div class="bg-white rounded-3xl max-w-3xl w-full modal-content shadow-2xl">
+
+      <div class="sticky top-0 bg-white border-b px-8 py-5 rounded-t-3xl">
+        <h2 class="text-3xl font-bold text-indigo-700">
+          Guia Completo - Negócio Online
+        </h2>
+      </div>
+
+      <div class="p-8 space-y-10 text-gray-700 leading-relaxed">
+
+        <!-- Baixar Arquivo PDF -->
+        <div class="text-center mb-4">
+          <h3 class="text-2xl font-bold text-gray-800">
+            Baixar Arquivo PDF
+          </h3>
+
+          <p class="text-gray-600">
+            Clique no botão abaixo para baixar o guia completo.
+          </p>
+        </div>
+
+        <!-- Botão Violeta Centralizado -->
+        <div class="flex justify-center my-8">
+          <a href="o-guia-definitivo-do-marketing-digital-rock-content-3206.pdf"
+             download="Guia-Completo-Marketing-Digital.pdf"
+             class="bg-violet-600 hover:bg-violet-700 text-white px-8 py-4 rounded-xl inline-flex items-center gap-3 font-semibold text-lg shadow-lg">
+            <i class="fa-solid fa-download"></i>
+            Baixar Guia Completo de Marketing Digital (PDF)
+          </a>
+        </div>
+
+        <div>
+          <h3 class="text-2xl font-bold mb-4">
+            1. O que é Marketing Digital?
+          </h3>
+
+          <p>
+            Conjunto de estratégias online para atrair clientes,
+            criar relacionamento, fortalecer a marca e gerar vendas.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function abrirModal() {
+      document.getElementById('modal').classList.remove('hidden');
+    }
+  </script>
+
+</body>
+</html>
